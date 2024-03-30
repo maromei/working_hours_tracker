@@ -31,7 +31,10 @@
 		}
 	},
 	"initializeCommand": "echo Initialize....",
-	"runArgs": ["--env-file",".devcontainer/devcontainer.env"]
+	"runArgs": [
+		"--env-file", ".devcontainer/devcontainer.env",
+		"--name", "working_hours_tracker-devcontainer"
+	]
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
 	//"remoteUser": "dockercontainer"
