@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "working_hours_tracker"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = []
+authors = [
+    {name = "maromei", email = "maromei@proton.me"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/maromei/working_hours_tracker#readme"
+Issues = "https://github.com/maromei/working_hours_tracker/issues"
+Source = "https://github.com/maromei/working_hours_tracker"
+
+[tool.hatch.version]
+path = "src/working_hours_tracker/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/working_hours_tracker"]
+
+#####################
+### ENV - DEFAULT ###
+#####################
+
+[tool.hatch.envs.default]
+
+[tool.hatch.envs.default.scripts]
+
+[tool.hatch.envs.default.env-vars]
+
+#######################
+### ENV - IPYKERNEL ###
+#######################
+
+[tool.hatch.envs.ipykernel]
+extra-dependencies = [
+    "ipykernel"
+]
+
+[tool.hatch.envs.ipykernel.scripts]
+install = "python -m ipykernel install --user --name working_hours_tracker --display-name \"General\""
+
+[tool.hatch.envs.ipykernel.env-vars]
+
+###################
+### ENV - BUILD ###
+###################
+
+[tool.hatch.envs.build]
+
+[tool.hatch.envs.build.scripts]
+
+[tool.hatch.envs.build.env-vars]
+
+##################
+### ENV - DOCS ###
+##################
+
+[tool.hatch.envs.docs]
+
+[tool.hatch.envs.docs.scripts]
