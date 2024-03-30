@@ -16,7 +16,9 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+    "python-dotenv"
+]
 dynamic = ["version"]
 
 [project.urls]
@@ -35,6 +37,7 @@ packages = ["src/working_hours_tracker"]
 #####################
 
 [tool.hatch.envs.default]
+path = ".hatch"
 
 [tool.hatch.envs.default.scripts]
 
