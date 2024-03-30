@@ -74,3 +74,11 @@ install = "python -m ipykernel install --user --name working_hours_tracker --dis
 [tool.hatch.envs.docs]
 
 [tool.hatch.envs.docs.scripts]
+
+[tool.hatch.envs.style]
+skip-install = true
+detached = true
+dependencies = [
+    "pre-commit",
+    "black"
+]
