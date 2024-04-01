@@ -26,7 +26,8 @@
 				"eamodio.gitlens",
 				"ms-python.python",
 				"ms-python.debugpy",
-				"njpwerner.autodocstring"
+				"njpwerner.autodocstring",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},

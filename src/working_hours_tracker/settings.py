@@ -16,7 +16,7 @@ def get_time_file_path() -> Path:
         Path: Path to txt file where the times will be saved.
     """
 
-    path_str: str|None = os.environ.get("TIME_FILE_PATH")
+    path_str: str | None = os.environ.get("TIME_FILE_PATH")
 
     time_file_path: Path = None
     if path_str is None:
@@ -27,8 +27,12 @@ def get_time_file_path() -> Path:
     if time_file_path.is_file():
         return time_file_path
 
-    os.mkdir(time_file_path.parent)
-    open(time_file_path, "r").close()
+    if not time_file_path.parent.is_dir():
+        os.mkdir(time_file_path.parent)
+
+    open(time_file_path, "w+").close()
+
+    print(time_file_path)
 
     return time_file_path
 
@@ -50,3 +54,8 @@ def get_base_dir() -> Path:
     BASE_PATH = Path(__file__).parent.parent.parent
 
     return BASE_PATH
+
+
+def get_main_window_ui_path() -> Path:
+
+    return Path(__file__).parent / "ui" / "main_window.ui"
