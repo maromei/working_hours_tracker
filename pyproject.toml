@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "working_hours_tracker"
 description = ""
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 keywords = []
 authors = [
     {name = "maromei", email = "maromei@proton.me"},
@@ -30,6 +30,9 @@ Source = "https://github.com/maromei/working_hours_tracker"
 [tool.hatch.version]
 path = "src/working_hours_tracker/__about__.py"
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/working_hours_tracker"]
 
@@ -41,6 +44,7 @@ packages = ["src/working_hours_tracker"]
 path = ".hatch"
 
 [tool.hatch.envs.default.scripts]
+main = "python src/working_hours_tracker/main.py"
 
 [tool.hatch.envs.default.env-vars]
 
