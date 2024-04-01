@@ -17,7 +17,8 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-    "python-dotenv"
+    "python-dotenv",
+    "pyqt5"
 ]
 dynamic = ["version"]
 
