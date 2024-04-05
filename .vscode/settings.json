@@ -1,3 +1,4 @@
 {
-    "python.defaultInterpreterPath": "/workspaces/working_hours_tracker/.hatch"
+    "python.defaultInterpreterPath": "/workspaces/working_hours_tracker/.hatch",
+    "files.eol": "\n"
 }
