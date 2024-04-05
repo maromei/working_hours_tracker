@@ -48,6 +48,22 @@ main = "python src/working_hours_tracker/main.py"
 
 [tool.hatch.envs.default.env-vars]
 
+###########################
+### ENV - hatch_windows ###
+###########################
+
+# The venv structure differes on windows formats, so if you are trying to
+# run this from a windows computer using the hatch created envs
+# --> use this
+
+[tool.hatch.envs.hatch_windows]
+path = ".hatch_windows"
+
+[tool.hatch.envs.hatch_windows.scripts]
+main = "python src/working_hours_tracker/main.py"
+
+[tool.hatch.envs.hatch_windows.env-vars]
+
 #######################
 ### ENV - IPYKERNEL ###
 #######################
