@@ -21,3 +21,7 @@ RUN mkdir /hatch
 RUN curl -L https://github.com/pypa/hatch/releases/download/hatch-v1.9.1/hatch-1.9.1-x86_64-unknown-linux-gnu.tar.gz >> /hatch/hatch.tar.gz
 RUN tar -xvzf /hatch/hatch.tar.gz -C /hatch
 RUN ln /hatch/hatch-1.9.1-x86_64-unknown-linux-gnu /usr/bin/hatch
+
+### Line Endings ###
+
+RUN apt-get update && apt-get install -y dos2unix
